@@ -16,7 +16,7 @@ __attribute__((always_inline, hot)) ssize_t interposed_pwrite(int fd,
     printf("Interposed\n");
     logged = true;
   }
-  return pwrite(fd, buf, count - 1, offset);
+  return pwrite(fd, buf, count, offset);
 }
 
 } // extern "C"
